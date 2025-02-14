@@ -74,3 +74,26 @@ class BuenaPracticaComentarios {
         // código de conexión a base de datos
     }
 }
+// Mala práctica: Comentarios que describen lo que hace el código
+class MalaPracticaComentarioQue {
+    void calcularDescuento(double precio) {
+        // Si el precio es mayor de 100, se aplica un 10% de descuento
+        if (precio > 100) {
+            precio = precio * 0.9;
+        }
+        // Imprimir el precio con descuento
+        System.out.println(precio);
+    }
+}
+
+// Buena práctica: Comentarios que explican por qué se hace algo
+class BuenaPracticaComentarioPorque {
+    void calcularDescuento(double precio) {
+        // Aplicamos un descuento solo si el precio es superior a 100,
+        // para incentivar compras mayores a este valor.
+        if (precio > 100) {
+            precio = precio * 0.9;
+        }
+        System.out.println(precio);
+    }
+}

@@ -46,27 +46,7 @@ class BuenaPracticaFunciones {
     }
 }
 
-// Mala práctica: Funciones con múltiples argumentos
-class MalaPracticaArgumentos {
-    void crearUsuario(String nombre, String correo, String contrasena, String direccion, String telefono) {
-        // código
-    }
-}
 
-// Buena práctica: Menos argumentos, encapsulando en un objeto
-class BuenaPracticaArgumentos {
-    class Usuario {
-        String nombre;
-        String correo;
-        String contrasena;
-        String direccion;
-        String telefono;
-    }
-
-    void crearUsuario(Usuario usuario) {
-        // código
-    }
-}
 
 // Mala práctica: Uso excesivo de switch
 class MalaPracticaSwitch {

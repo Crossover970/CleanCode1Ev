@@ -48,3 +48,40 @@ class Vehiculo {
         // código
     }
 }
+// Mala práctica: Nombres inconsistentes para clases que realizan tareas similares
+class Manager {
+    void gestionarEmpleados() {
+        // Código para gestionar empleados
+    }
+}
+
+class Controller {
+    void controlarEmpleados() {
+        // Código para controlar empleados
+    }
+}
+
+class Supervisor {
+    void supervisarEmpleados() {
+        // Código para supervisar empleados
+    }
+}
+
+// Buena práctica: Usar un nombre coherente para clases que realizan tareas similares
+class GestorEmpleados {
+    void gestionarEmpleados() {
+        // Código para gestionar empleados
+    }
+}
+
+class ControladorEmpleados {
+    void controlarEmpleados() {
+        // Código para controlar empleados
+    }
+}
+
+class SupervisorEmpleados {
+    void supervisarEmpleados() {
+        // Código para supervisar empleados
+    }
+}

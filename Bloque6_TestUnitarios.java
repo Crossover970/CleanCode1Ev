@@ -90,12 +90,11 @@ public void testResta() {
 public void testOperaciones() {
     Calculadora calculadora = new Calculadora();
     assertEquals(5, calculadora.sumar(2, 3));
-    assertEquals(2, calculadora.restar(5, 3));
-    assertEquals(6, calculadora.multiplicar(2, 3));
-    assertEquals(2, calculadora.dividir(6, 3)); // Un fallo nos podría afectar a todos los asserts
+    assertEquals(2, calculadora.restar(5, 3)); 
+// Un fallo nos podría afectar a todos los asserts
 }
-// Buena práctica: Un solo assert por test
 
+// Buena práctica: Un solo assert por test
 @Test
 public void testSuma() {
     Calculadora calculadora = new Calculadora();
@@ -107,17 +106,6 @@ public void testResta() {
     Calculadora calculadora = new Calculadora();
     assertEquals(2, calculadora.restar(5, 3));
 }
-
-@Test
-public void testMultiplicacion() {
-    Calculadora calculadora = new Calculadora();
-    assertEquals(6, calculadora.multiplicar(2, 3));
-}
-
-@Test
-public void testDivision() {
-    Calculadora calculadora = new Calculadora();
-    assertEquals(2, calculadora.dividir(6, 3));
 }
 //27. Un único concepto por test
 // Mala práctica: Test que prueba más de un concepto a la vez
@@ -127,7 +115,6 @@ public void testOperaciones() {
     Calculadora calculadora = new Calculadora();
     int suma = calculadora.sumar(2, 3);
     int resta = calculadora.restar(5, 3);
-    
     assertEquals(5, suma);
     assertEquals(2, resta); // Un solo test para verificar conceptos diferentes
 }

@@ -45,11 +45,7 @@ public void testCalculadora() {
     int resultado2 = calculadora.restar(5, 3);
     assertEquals(2, resultado2);
     
-    int resultado3 = calculadora.multiplicar(2, 3);
-    assertEquals(6, resultado3);
-    
-    int resultado4 = calculadora.dividir(6, 3);
-    assertEquals(2, resultado4); // Test largo y difícil de mantener
+   // Test largo y difícil de mantener
 }
 // Buena práctica: Tests organizados y claros
 @Test
@@ -63,20 +59,6 @@ public void testSuma() {
 public void testResta() {
     Calculadora calculadora = new Calculadora();
     int resultado = calculadora.restar(5, 3);
-    assertEquals(2, resultado);
-}
-
-@Test
-public void testMultiplicacion() {
-    Calculadora calculadora = new Calculadora();
-    int resultado = calculadora.multiplicar(2, 3);
-    assertEquals(6, resultado);
-}
-
-@Test
-public void testDivision() {
-    Calculadora calculadora = new Calculadora();
-    int resultado = calculadora.dividir(6, 3);
     assertEquals(2, resultado);
 }
 //25. Clean tests

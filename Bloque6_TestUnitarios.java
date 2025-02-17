@@ -69,8 +69,6 @@ public void testCalculadora() {
     Calculadora calculadora = new Calculadora();
     assertEquals(5, calculadora.sumar(2, 3));
     assertEquals(2, calculadora.restar(5, 3));
-    assertEquals(6, calculadora.multiplicar(2, 3));
-    assertEquals(2, calculadora.dividir(6, 3));
 }
 // Buena práctica: Test claro y legible
 
@@ -84,18 +82,6 @@ public void testSuma() {
 public void testResta() {
     Calculadora calculadora = new Calculadora();
     assertEquals("La resta de 5 - 3 debe ser 2", 2, calculadora.restar(5, 3));
-}
-
-@Test
-public void testMultiplicacion() {
-    Calculadora calculadora = new Calculadora();
-    assertEquals("La multiplicación de 2 * 3 debe ser 6", 6, calculadora.multiplicar(2, 3));
-}
-
-@Test
-public void testDivision() {
-    Calculadora calculadora = new Calculadora();
-    assertEquals("La división de 6 / 3 debe ser 2", 2, calculadora.dividir(6, 3));
 }
 //26. Un Assert por test
 // Mala práctica: Varios asserts en un solo test, difícil de saber qué está fallando

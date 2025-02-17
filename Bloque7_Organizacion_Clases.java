@@ -119,8 +119,7 @@ class Notificador {
     }
 }
 //32. Cohesión
-// Mala práctica: La clase no es cohesiva, las variables no se usan de manera consistente en los métodos
-
+// Mala práctica: La clase no es cohesiva.
 class Usuario {
     private String nombre;
     private int edad;
@@ -130,18 +129,11 @@ class Usuario {
         this.nombre = nuevoNombre;
     }
 
-    public void actualizarEdad(int nuevaEdad) {
-        this.edad = nuevaEdad;
-    }
-
-    public void actualizarDireccion(String nuevaDireccion) {
-        this.direccion = nuevaDireccion;
-    }
-
     public void realizarOperacion(int numero) {
         // Lógica que no tiene nada que ver con la clase Usuario
     }
 }
+
 // Buena práctica: Cada método trabaja sobre las variables de instancia de la clase
 
 class Usuario {

@@ -91,35 +91,25 @@ class GestionEdad {
 }
 //31. Principio de Responsabilidad Única
 // Mala práctica: Clase que tiene múltiples responsabilidades, lo que hace difícil de mantener
-
 class Usuario {
     private String nombre;
     private int edad;
     
     public void actualizarNombre(String nuevoNombre) {
         this.nombre = nuevoNombre;
-    }
-    
-    public void actualizarEdad(int nuevaEdad) {
-        this.edad = nuevaEdad;
     }
 
     public void notificarUsuario() {
-        // Lógica de notificación, lo cual es una responsabilidad diferente
+        // Lógica de notificación, que debería estar en otra clase
     }
 }
 // Buena práctica: Cada clase tiene una única responsabilidad
-
 class Usuario {
     private String nombre;
     private int edad;
     
     public void actualizarNombre(String nuevoNombre) {
         this.nombre = nuevoNombre;
-    }
-
-    public void actualizarEdad(int nuevaEdad) {
-        this.edad = nuevaEdad;
     }
 }
 

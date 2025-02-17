@@ -154,61 +154,48 @@ class Usuario {
 }
 //33. Organiza tu código para prepararlo para el cambio
 // Mala práctica: Dependencia directa de detalles de implementación
+class Pedido {
+    private String tipoEnvio;
 
-class Usuario {
-    private String nombre;
-    private int edad;
-    
-    public void setEdad(int edad) {
-        // Código específico de la implementación que puede cambiar en el futuro
-        this.edad = edad;
+    public Pedido(String tipoEnvio) {
+        this.tipoEnvio = tipoEnvio;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-}
-class GestorUsuario {
-    private Usuario usuario;
-
-    public GestorUsuario() {
-        // Dependencia concreta en lugar de usar una interfaz o clase abstracta
-        usuario = new Usuario();
-    }
-
-    public void actualizarEdad(int edad) {
-        usuario.setEdad(edad);  // Cambio en Usuario implicaría cambios aquí
+    public void procesar() {
+        if (tipoEnvio.equals("expreso")) {
+            // lógica para envío expreso
+        } else {
+            // lógica para envío estándar
+        }
     }
 }
+
 // Buena práctica: El código depende de abstracciones y no de detalles de implementación
-
-interface IUsuario {
-    void setEdad(int edad);
-    int getEdad();
+interface Envio {
+    void procesarEnvio();
 }
 
-class Usuario implements IUsuario {
-    private String nombre;
-    private int edad;
-    
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public int getEdad() {
-        return edad;
+class EnvioExpreso implements Envio {
+    public void procesarEnvio() {
+        // lógica para envío expreso
     }
 }
 
-class GestorUsuario {
-    private IUsuario usuario;  // Se usa la interfaz en lugar de una implementación concreta
+class EnvioEstandar implements Envio {
+    public void procesarEnvio() {
+        // lógica para envío estándar
+    }
+}
 
-    public GestorUsuario(IUsuario usuario) {
-        this.usuario = usuario;
+class Pedido {
+    private Envio envio;
+
+    public Pedido(Envio envio) {
+        this.envio = envio;
     }
 
-    public void actualizarEdad(int edad) {
-        usuario.setEdad(edad);  // Cambio en Usuario no afecta directamente al GestorUsuario
+    public void procesar() {
+        envio.procesarEnvio();
     }
 }
 //34. Separa la construcción de un sistema de su uso

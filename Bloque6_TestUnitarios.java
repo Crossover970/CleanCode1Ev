@@ -1,4 +1,4 @@
-Bloque6_TestUnitarios3. Las tres leyes del TDD
+//Bloque6_TestUnitarios3. Las tres leyes del TDD
 // Mala práctica: No seguimos las leyes del TDD
 // Código de producción sin test previo
 
